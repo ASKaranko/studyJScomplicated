@@ -1,46 +1,16 @@
 'use strict';
-//Дни недели
 
-let daysOfWeekRu = ['Понедельник', 'Вторник', 'Среда', 'Черверг', 'Пятница', 'Суббота', 'Воскресенье'],
-  daysOfWeekEn = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+let strFull = '  Success is not final, failure is not fatal: it is the courage to continue that counts.  ';
+console.log("Вся строка:", strFull);
 
-let question = prompt('Выберите на каком языке отображать дни недели', 'ru, en');
-
-while(true) {
-  if (question === 'ru') {
-    console.log('Дни недели', daysOfWeekRu);
-    break;
-  } else if(question === 'en') {
-    console.log('Days of Week', daysOfWeekEn);
-    break;
-  } else {
-    question = prompt('Выберите правильный вариант: введите слово ru или en', 'ru, en');
+function strtrim(str) {
+  if (typeof (str) !== 'string') {
+    console.log('Введенный вами текст не является строкой');
+  }
+  let strContracted = str.trim();
+  if (strContracted.length > 30) {
+    console.log(strContracted.substring(0,30) + "...");
   }
 }
 
-switch (question) {
-  case 'ru':
-    console.log('Дни недели', daysOfWeekRu);
-    break;
-  case 'en':
-    console.log('Days of Week', daysOfWeekEn);
-    break;
-}
-
-// let objLang = {
-//   ru: daysOfWeekRu,
-//   en: daysOfWeekEn,
-// };
-
-// console.log(objLang.ru);
-
-let arrLang = [daysOfWeekRu, daysOfWeekEn];
-console.log(arrLang[0]);
-console.log(arrLang[1]);
-
-//Второе задание
-
-let namePerson = prompt('Выберите имя пользователя из списка или укажите другое имя', 'Артем, Максим');
-
-let result = namePerson === 'Артем' ? 'Директор' : namePerson === 'Максим' ? 'Преподаватель' : 'Студент';
-console.log(result);
+strtrim(strFull);
