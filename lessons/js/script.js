@@ -1,16 +1,20 @@
 'use strict';
 
-let strFull = '  Success is not final, failure is not fatal: it is the courage to continue that counts.  ';
-console.log("Вся строка:", strFull);
+//Задание 1
 
-function strtrim(str) {
-  if (typeof (str) !== 'string') {
-    console.log('Введенный вами текст не является строкой');
-  }
-  let strContracted = str.trim();
-  if (strContracted.length > 30) {
-    console.log(strContracted.substring(0,30) + "...");
+let arr = ['10000', '34568', '11204.21', '400501', '289283', '23232', '73256120'];
+
+for (let i = 0; i < arr.length; i++) {
+  let n = parseInt(arr[i].substring(0,1));
+  if (n === 2 || n === 4) {
+    console.log(parseInt(arr[i]));
   }
 }
 
-strtrim(strFull);
+// Задание 2
+
+let arrSimple = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97];
+console.log("Простые числа до 100 в столбец");
+for (let i = 0; i < arrSimple.length; i++) {
+  console.log(arrSimple[i] + " Делитель данного числа: 1 и " + arrSimple[i]);
+}
